@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+        h1 {
+            color: aqua;
+            font-size: 5rem;
+            position: relative;
+            margin-bottom: 0;
+            right: -490px;
+            top: -25px;
+        }
+
+        h3 {
+            color: aqua;
+            font-size: 1.5rem;
+            
+        }
+
+        #flex {
+            display: flex;
+            
+            margin-top: 0;
+            left: 50px;
+            justify-content: center;
+            column-gap: 250px;
+        }
+
+        #fle {
+            display: flex;
+            column-gap: 100px;
+            justify-content: center;
+        }
+
+        footer {
+            text-align: center;
+        } 
+        button {
+            position: relative;
+            left: 580px;
+            padding: 20px;
+            font-size: 2rem;
+            border-radius: 12px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="cr">Refresh Me</h1>
+        
+        <div id="flex">
+        <h3><em>Player 1</em></h3>
+        <h3><em>Player 2</em></h3>
+    </div>
+    <div id="fle">
+        <h3><img id="hero" src="./images/dice6.png"></h3>
+        <h3><img id="hero1" src="./images/dice6.png"></h3>
+    </div><br>
+    <button onclick="comp(); calculate1();calculate2();">Click me</button><br><br><br>
+    <footer>
+        <b>@www.prashantkumar.com</b>
+    </footer>
+    </div>
+    <script>
+        var n = Math.random();
+        n=Math.floor(n*6)+1;
+        var m = Math.random();
+        m=Math.floor(m*6)+1;
+
+            function comp() {
+                if(n==m){
+                    document.getElementById('cr').innerHTML="Draw";
+                }
+                else if(n>m){
+                    document.getElementById('cr').innerHTML="Player 1 wins";
+                }
+                else{
+                    document.getElementById('cr').innerHTML="Player 2 wins";
+                }
+            }
+                function calculate1() {
+            
+            
+            if (n==1){
+            let displayImage = document.getElementById('hero');
+            
+            displayImage.src='./images/dice1.png';
+            
+            }
+            else if(n==2){
+                let displayImage = document.getElementById('hero');
+            
+            displayImage.src='./images/dice2.png';  
+        
+            }
+
+            else if(n==3){
+                let displayImage = document.getElementById('hero');
+            
+            displayImage.src='./images/dice3.png';   
+        
+            }
+
+            else if(n==4){
+                let displayImage = document.getElementById('hero');
+            
+            displayImage.src='./images/dice4.png';   
+            
+            }
+
+            else if(n==5){
+                let displayImage = document.getElementById('hero');
+            
+            displayImage.src='./images/dice5.png';  
+           
+            }
+            else{
+                let displayImage = document.getElementById('hero');
+            
+            displayImage.src='./images/dice6.png';   
+            
+            }
+            
+        }
+
+        function calculate2(){
+            if (m==1){
+            let displayImage1 = document.getElementById('hero1');
+            
+            displayImage1.src='./images/dice1.png';
+            
+            }
+            else if(m==2){
+                let displayImage1 = document.getElementById('hero1');
+            
+            displayImage1.src='./images/dice2.png'; 
+             
+            }
+
+            else if(m==3){
+                let displayImage1 = document.getElementById('hero1');
+            
+            displayImage1.src='./images/dice3.png';   
+            
+            }
+
+            else if(m==4){
+                let displayImage1 = document.getElementById('hero1');
+            
+            displayImage1.src='./images/dice4.png';  
+            
+            }
+
+            else if(n==m){
+                let displayImage1 = document.getElementById('hero1');
+            
+            displayImage1.src='./images/dice5.png';   
+            
+            }
+            else{
+                let displayImage1 = document.getElementById('hero1');
+            
+            displayImage1.src='./images/dice6.png';  
+             
+            }
+                
+            }
+            
+        
+    </script>
+</body>
+</html>
